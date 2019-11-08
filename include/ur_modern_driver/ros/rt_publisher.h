@@ -65,7 +65,7 @@ private:
 
 public:
   RTPublisher(std::string& joint_prefix, std::string& base_frame, std::string& tool_frame, bool temp_only = false)
-    : joint_pub_(nh_.advertise<sensor_msgs::JointState>("joint_states", 1))
+    : joint_pub_(nh_.advertise<sensor_msgs::JointState>("arm_joint_states", 1))
     , wrench_pub_(nh_.advertise<geometry_msgs::WrenchStamped>("wrench", 1))
     , tool_vel_pub_(nh_.advertise<geometry_msgs::TwistStamped>("tool_velocity", 1))
     , joint_temperature_pub_(nh_.advertise<sensor_msgs::Temperature>("joint_temperature", 1))
